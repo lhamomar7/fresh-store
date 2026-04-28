@@ -1,10 +1,8 @@
-/* ===== GENERAL ===== */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
 
-/* ===== HEADER ===== */
 header {
     display: flex;
     justify-content: space-between;
@@ -28,7 +26,6 @@ nav a:hover {
     color: purple;
 }
 
-/* ===== HERO ===== */
 .hero {
     background-color: #d96b3b;
     height: 400px;
@@ -66,7 +63,6 @@ nav a:hover {
     color: white;
 }
 
-/* ===== ABOUT ===== */
 .about {
     padding: 40px 60px;
 }
@@ -81,7 +77,6 @@ nav a:hover {
     line-height: 1.6;
 }
 
-/* ===== CARDS ===== */
 .cards {
     display: flex;
     gap: 30px;
@@ -119,7 +114,6 @@ nav a:hover {
     color: purple;
 }
 
-/* ===== HEART + CART ===== */
 .card-image {
     position: relative;
 }
@@ -151,7 +145,6 @@ nav a:hover {
     border-radius: 50%;
 }
 
-/* ===== GALLERY ===== */
 .gallery {
     display: flex;
     justify-content: center;
@@ -173,7 +166,6 @@ nav a:hover {
     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
 
-/* ===== PIZZA LIST ===== */
 .pizza-list {
     padding: 20px 60px;
 }
@@ -188,7 +180,6 @@ nav a:hover {
     font-size: 18px;
 }
 
-/* ===== CHOICE ===== */
 .choice {
     background-color: #eee8ff;
     padding: 30px 60px;
@@ -207,7 +198,6 @@ nav a:hover {
     text-align: left;
 }
 
-/* ===== BUTTON ===== */
 .order-btn {
     display: inline-block;
     margin-top: 20px;
@@ -223,7 +213,6 @@ nav a:hover {
     background-color: #d96b3b;
 }
 
-/* ===== FOOTER ===== */
 footer {
     background-color: #eee8ff;
     padding: 30px 60px;
