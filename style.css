@@ -1,8 +1,10 @@
+/* ===== GENERAL ===== */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
 
+/* ===== HEADER ===== */
 header {
     display: flex;
     justify-content: space-between;
@@ -26,6 +28,7 @@ nav a:hover {
     color: purple;
 }
 
+/* ===== HERO ===== */
 .hero {
     background-color: #d96b3b;
     height: 400px;
@@ -46,6 +49,24 @@ nav a:hover {
 .hero p {
     font-size: 18px;
 }
+
+.hero-btn {
+    width: fit-content;
+    margin-top: 20px;
+    background-color: white;
+    color: #d96b3b;
+    padding: 12px 28px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero-btn:hover {
+    background-color: purple;
+    color: white;
+}
+
+/* ===== ABOUT ===== */
 .about {
     padding: 40px 60px;
 }
@@ -59,17 +80,34 @@ nav a:hover {
     font-size: 16px;
     line-height: 1.6;
 }
+
+/* ===== CARDS ===== */
 .cards {
     display: flex;
-    gap: 20px;
+    gap: 30px;
     padding: 40px 60px;
 }
 
 .card {
-    background-color: #f2f2f2;
+    background: #eee;
     padding: 20px;
-    width: 200px;
     border-radius: 10px;
+    width: 250px;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 .card h3 {
@@ -80,22 +118,117 @@ nav a:hover {
     font-weight: bold;
     color: purple;
 }
-.card {
-    background-color: #f2f2f2;
-    padding: 20px;
-    width: 200px;
-    border-radius: 10px;
 
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: 0.3s;
+/* ===== HEART + CART ===== */
+.card-image {
+    position: relative;
 }
-.card:hover {
-    transform: translateY(-5px);
+
+.heart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: white;
+    color: purple;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 28px;
+    font-size: 18px;
 }
+
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart {
+    background-color: purple;
+    color: white;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+/* ===== GALLERY ===== */
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 60px;
+}
+
+.gallery img {
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* ===== PIZZA LIST ===== */
+.pizza-list {
+    padding: 20px 60px;
+}
+
+.pizza-list h2,
+.choice h2 {
+    color: purple;
+}
+
+.pizza-list li {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/* ===== CHOICE ===== */
+.choice {
+    background-color: #eee8ff;
+    padding: 30px 60px;
+    margin: 30px 60px;
+}
+
+.choice table {
+    width: 300px;
+    border-collapse: collapse;
+}
+
+.choice th,
+.choice td {
+    border: 1px solid purple;
+    padding: 10px;
+    text-align: left;
+}
+
+/* ===== BUTTON ===== */
+.order-btn {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: purple;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.order-btn:hover {
+    background-color: #d96b3b;
+}
+
+/* ===== FOOTER ===== */
 footer {
     background-color: #eee8ff;
     padding: 30px 60px;
     display: flex;
+    justify-content: space-between;
     gap: 80px;
     align-items: flex-start;
     margin-top: 32px;
@@ -121,176 +254,6 @@ footer a:hover {
 }
 
 footer p {
-    align-self: flex-end;
-}
-footer p {
     margin: 0;
-}
-footer {
-    justify-content: space-between;
-}
-.gallery {
-    display: flex;
-    gap: 25px;
-    padding: 40px 60px;
-}
-
-.gallery-box {
-    border: 3px solid #eee8ff;
-    padding: 40px;
-    height: 120px;
-}
-
-.pizza-list {
-    padding: 20px 60px;
-}
-
-.pizza-list h2,
-.choice h2 {
-    color: purple;
-}
-
-.pizza-list li {
-    margin-bottom: 10px;
-    font-size: 18px;
-}
-
-.choice {
-    background-color: #eee8ff;
-    padding: 30px 60px;
-    margin: 30px 60px;
-}
-.choice table {
-    width: 300px;
-    border-collapse: collapse;
-}
-
-.choice th,
-.choice td {
-    border: 1px solid purple;
-    padding: 10px;
-    text-align: left;
-}
-.gallery {
-    display: flex;
-    gap: 30px;
-    padding: 40px 60px;
-}
-
-.gallery img {
-    width: 250px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-.gallery {
-    display: flex;
-    gap: 30px;
-    padding: 40px 60px;
-}
-
-.gallery img {
-    width: 250px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 12px;
-
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gallery img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-}
-.gallery {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding: 40px 60px;
-}
-.order-btn {
-    display: inline-block;
-    margin-top: 20px;
-    background-color: purple;
-    color: white;
-    padding: 12px 25px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.order-btn:hover {
-    background-color: #d96b3b;
-}
-.hero-btn {
-    width: fit-content;
-    margin-top: 20px;
-    background-color: white;
-    color: #d96b3b;
-    padding: 12px 28px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.hero-btn:hover {
-    background-color: purple;
-    color: white;
-}
-.card img {
-    width: 100%;
-    height: 130px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-.cards {
-    display: flex;
-    gap: 30px;
-    padding: 40px 60px;
-}
-
-.card {
-    background: #eee;
-    padding: 20px;
-    border-radius: 10px;
-    width: 250px;
-}
-
-.card img {
-    width: 100%;
-    height: 130px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-.card-image {
-    position: relative;
-}
-
-.heart {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: white;
-    color: purple;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 28px;
-    font-size: 20px;
-}
-
-.card-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.cart {
-    background-color: purple;
-    color: white;
-    padding: 8px;
-    border-radius: 50%;
+    align-self: flex-end;
 }
