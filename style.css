@@ -3,11 +3,17 @@ body {
     font-family: Arial, sans-serif;
 }
 
+/* ===== HEADER ===== */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 60px;
+    position: sticky;         /* תיקון: header נשאר למעלה בגלילה */
+    top: 0;
+    background-color: white;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 .logo {
@@ -26,15 +32,14 @@ nav a:hover {
     color: purple;
 }
 
+/* ===== HERO ===== */
 .hero {
     background-color: #d96b3b;
     height: 400px;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-left: 60px;
-
     color: white;
 }
 
@@ -63,6 +68,7 @@ nav a:hover {
     color: white;
 }
 
+/* ===== ABOUT ===== */
 .about {
     padding: 40px 60px;
 }
@@ -77,10 +83,12 @@ nav a:hover {
     line-height: 1.6;
 }
 
+/* ===== CARDS ===== */
 .cards {
     display: flex;
     gap: 30px;
     padding: 40px 60px;
+    flex-wrap: wrap;          /* תיקון: כרטיסים לא גולשים מחוץ למסך */
 }
 
 .card {
@@ -88,7 +96,6 @@ nav a:hover {
     padding: 20px;
     border-radius: 10px;
     width: 250px;
-
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     transition: 0.3s;
 }
@@ -114,12 +121,13 @@ nav a:hover {
     color: purple;
 }
 
+/* ===== POSITIONS: relative + absolute ===== */
 .card-image {
-    position: relative;
+    position: relative;       /* עוגן — האלמנטים absolute מחושבים לפיו */
 }
 
 .heart {
-    position: absolute;
+    position: absolute;       /* מוצמד לפינה העליונה-ימנית של התמונה */
     top: 10px;
     right: 10px;
     background-color: white;
@@ -145,11 +153,13 @@ nav a:hover {
     border-radius: 50%;
 }
 
+/* ===== GALLERY ===== */
 .gallery {
     display: flex;
     justify-content: center;
     gap: 30px;
     padding: 40px 60px;
+    flex-wrap: wrap;          /* תיקון: תמונות לא גולשות */
 }
 
 .gallery img {
@@ -157,7 +167,6 @@ nav a:hover {
     height: 180px;
     object-fit: cover;
     border-radius: 12px;
-
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -166,6 +175,7 @@ nav a:hover {
     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
 
+/* ===== PIZZA LIST ===== */
 .pizza-list {
     padding: 20px 60px;
 }
@@ -180,6 +190,7 @@ nav a:hover {
     font-size: 18px;
 }
 
+/* ===== CHOICE / TABLE ===== */
 .choice {
     background-color: #eee8ff;
     padding: 30px 60px;
@@ -213,6 +224,7 @@ nav a:hover {
     background-color: #d96b3b;
 }
 
+/* ===== FOOTER ===== */
 footer {
     background-color: #eee8ff;
     padding: 30px 60px;
@@ -220,6 +232,7 @@ footer {
     justify-content: space-between;
     gap: 80px;
     align-items: flex-start;
+    flex-wrap: wrap;          /* תיקון: footer נשבר נכון במסך צר */
     margin-top: 32px;
 }
 
@@ -244,5 +257,7 @@ footer a:hover {
 
 footer p {
     margin: 0;
-    align-self: flex-end;
+    width: 100%;              /* תיקון: copyright ממורכז בשורה משלו */
+    text-align: center;
+    padding-top: 10px;
 }
