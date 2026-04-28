@@ -1,6 +1,12 @@
-body {
+* {
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;
+}
+
+body {
     font-family: Arial, sans-serif;
+    color: #333;
 }
 
 /* ===== HEADER ===== */
@@ -8,256 +14,345 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 60px;
-    position: sticky;         /* תיקון: header נשאר למעלה בגלילה */
+    padding: 18px 40px;
+    border-bottom: 4px solid #b8a9e8;
+    position: sticky;
     top: 0;
     background-color: white;
     z-index: 100;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
-.logo {
-    font-size: 22px;
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.logo-text {
+    font-size: 18px;
     font-weight: bold;
+    color: #333;
+    letter-spacing: 2px;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
 }
 
 nav a {
-    margin-left: 30px;
     text-decoration: none;
-    color: black;
-    font-size: 16px;
+    color: #888;
+    font-size: 15px;
 }
 
-nav a:hover {
-    color: purple;
+nav a:hover,
+nav a.active {
+    color: #5a3e9e;
+    font-weight: bold;
 }
 
 /* ===== HERO ===== */
 .hero {
-    background-color: #d96b3b;
-    height: 400px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 60px;
-    color: white;
+    align-items: center;
+    background-color: #ede9ff;
+    padding: 0 40px;
+    min-height: 320px;
 }
 
-.hero h1 {
-    font-size: 40px;
-    margin: 0;
+.hero-text {
+    flex: 1;
+    padding-right: 40px;
 }
 
-.hero p {
-    font-size: 18px;
+.hero-text h1 {
+    font-size: 42px;
+    color: #5a3e9e;
+    margin-bottom: 16px;
 }
 
-.hero-btn {
-    width: fit-content;
-    margin-top: 20px;
-    background-color: white;
-    color: #d96b3b;
-    padding: 12px 28px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
+.hero-text p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
 }
 
-.hero-btn:hover {
-    background-color: purple;
-    color: white;
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
 }
 
 /* ===== ABOUT ===== */
 .about {
-    padding: 40px 60px;
+    padding: 40px;
+    border-top: 3px solid #ede9ff;
 }
 
 .about h2 {
-    color: purple;
-    font-size: 28px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #5a3e9e;
+    margin-bottom: 16px;
 }
 
 .about p {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.6;
+    color: #444;
+    margin-bottom: 12px;
 }
 
-/* ===== CARDS ===== */
-.cards {
-    display: flex;
-    gap: 30px;
-    padding: 40px 60px;
-    flex-wrap: wrap;          /* תיקון: כרטיסים לא גולשים מחוץ למסך */
+/* ===== POPULAR DRINKS ===== */
+.popular {
+    padding: 30px 40px;
 }
 
-.card {
-    background: #eee;
-    padding: 20px;
-    border-radius: 10px;
-    width: 250px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-.card img {
-    width: 100%;
-    height: 130px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-
-.card h3 {
-    margin: 0;
-}
-
-.card span {
+.popular h2 {
+    font-size: 20px;
     font-weight: bold;
-    color: purple;
+    color: #5a3e9e;
+    margin-bottom: 20px;
 }
 
-/* ===== POSITIONS: relative + absolute ===== */
+/* 2 עמודות */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding-bottom: 32px;
+}
+
+/* ===== CARD ===== */
+.card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+/* position: relative — עוגן ללב */
 .card-image {
-    position: relative;       /* עוגן — האלמנטים absolute מחושבים לפיו */
+    position: relative;
 }
 
+.card-image img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+}
+
+/* לב — position: absolute */
 .heart {
-    position: absolute;       /* מוצמד לפינה העליונה-ימנית של התמונה */
+    position: absolute;
     top: 10px;
     right: 10px;
     background-color: white;
-    color: purple;
-    width: 28px;
-    height: 28px;
+    color: #c084fc;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
-    text-align: center;
-    line-height: 28px;
-    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.card h3 {
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px 14px 4px;
+}
+
+.card-desc {
+    font-size: 12px;
+    color: #777;
+    padding: 0 14px 10px;
+    line-height: 1.4;
 }
 
 .card-bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 8px 14px 14px;
 }
 
+.price {
+    font-size: 14px;
+    font-weight: bold;
+    color: #5a3e9e;
+}
+
+/* עגלה — עיגול סגול */
 .cart {
-    background-color: purple;
+    background-color: #5a3e9e;
     color: white;
-    padding: 8px;
+    width: 34px;
+    height: 34px;
     border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    cursor: pointer;
 }
 
 /* ===== GALLERY ===== */
 .gallery {
     display: flex;
     justify-content: center;
-    gap: 30px;
-    padding: 40px 60px;
-    flex-wrap: wrap;          /* תיקון: תמונות לא גולשות */
+    gap: 20px;
+    padding: 30px 40px;
 }
 
+/* גובה קבוע, רוחב לא קבוע, מסגרת סגולה */
 .gallery img {
-    width: 250px;
-    height: 180px;
+    height: 160px;
+    width: 220px;
     object-fit: cover;
-    border-radius: 12px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #b8a9e8;
 }
 
-.gallery img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+/* ===== LIST OF DRINKS ===== */
+.drinks-list {
+    padding: 20px 40px 30px;
 }
 
-/* ===== PIZZA LIST ===== */
-.pizza-list {
-    padding: 20px 60px;
-}
-
-.pizza-list h2,
-.choice h2 {
-    color: purple;
-}
-
-.pizza-list li {
-    margin-bottom: 10px;
+.drinks-list h2 {
     font-size: 18px;
-}
-
-/* ===== CHOICE / TABLE ===== */
-.choice {
-    background-color: #eee8ff;
-    padding: 30px 60px;
-    margin: 30px 60px;
-}
-
-.choice table {
-    width: 300px;
-    border-collapse: collapse;
-}
-
-.choice th,
-.choice td {
-    border: 1px solid purple;
-    padding: 10px;
-    text-align: left;
-}
-
-.order-btn {
-    display: inline-block;
-    margin-top: 20px;
-    background-color: purple;
-    color: white;
-    padding: 12px 25px;
-    border-radius: 25px;
-    text-decoration: none;
     font-weight: bold;
+    color: #5a3e9e;
+    margin-bottom: 16px;
 }
 
-.order-btn:hover {
-    background-color: #d96b3b;
+.drinks-list ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.drinks-list li {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 15px;
+}
+
+/* עיגול סגול לכל פריט ברשימה */
+.drink-icon {
+    background-color: #5a3e9e;
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+/* ===== YOUR CHOICE ===== */
+.your-choice {
+    padding: 20px 40px 40px;
+}
+
+.your-choice h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #5a3e9e;
+    margin-bottom: 16px;
+}
+
+.choice-box {
+    background-color: #ede9ff;
+    padding: 20px 30px;
+    width: 60%;
+    min-height: 200px;
+}
+
+.choice-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.choice-table th,
+.choice-table td {
+    border: 1px solid #b8a9e8;
+    padding: 10px 16px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.choice-table th {
+    background-color: #5a3e9e;
+    color: white;
 }
 
 /* ===== FOOTER ===== */
 footer {
-    background-color: #eee8ff;
-    padding: 30px 60px;
+    background-color: #ede9ff;
     display: flex;
-    justify-content: space-between;
     gap: 80px;
-    align-items: flex-start;
-    flex-wrap: wrap;          /* תיקון: footer נשבר נכון במסך צר */
-    margin-top: 32px;
+    padding: 30px 40px;
 }
 
-footer div {
+.footer-col {
     display: flex;
     flex-direction: column;
+    gap: 8px;
 }
 
-footer h4 {
-    margin: 0 0 15px;
+.footer-col h4 {
+    font-size: 13px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 6px;
+    letter-spacing: 1px;
 }
 
-footer a {
-    color: black;
+.footer-col a {
+    color: #444;
     text-decoration: none;
-    margin-bottom: 8px;
+    font-size: 14px;
 }
 
-footer a:hover {
-    color: purple;
+.footer-col a:hover {
+    color: #5a3e9e;
 }
 
-footer p {
-    margin: 0;
-    width: 100%;              /* תיקון: copyright ממורכז בשורה משלו */
-    text-align: center;
-    padding-top: 10px;
+.social-icons {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.social-icons a {
+    color: #333;
+    font-size: 18px;
+}
+
+.social-icons a:hover {
+    color: #5a3e9e;
+}
+
+.copyright {
+    font-size: 12px;
+    color: #666;
+    margin-top: 6px;
 }
