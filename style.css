@@ -25,3 +25,107 @@ nav a {
 nav a:hover {
     color: purple;
 }
+
+.hero {
+    background-color: #d96b3b;
+    height: 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 60px;
+
+    color: white;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 18px;
+}
+.about {
+    padding: 40px 60px;
+}
+
+.about h2 {
+    color: purple;
+    font-size: 28px;
+}
+
+.about p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+.cards {
+    display: flex;
+    gap: 20px;
+    padding: 40px 60px;
+}
+
+.card {
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 200px;
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin: 0;
+}
+
+.card span {
+    font-weight: bold;
+    color: purple;
+}
+.card {
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 200px;
+    border-radius: 10px;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+footer {
+    background-color: #eee8ff;
+    padding: 30px 60px;
+    display: flex;
+    gap: 80px;
+    align-items: flex-start;
+    margin-top: 32px;
+}
+
+footer div {
+    display: flex;
+    flex-direction: column;
+}
+
+footer h4 {
+    margin: 0 0 15px;
+}
+
+footer a {
+    color: black;
+    text-decoration: none;
+    margin-bottom: 8px;
+}
+
+footer a:hover {
+    color: purple;
+}
+
+footer p {
+    align-self: flex-end;
+}
+footer p {
+    margin: 0;
+}
+footer {
+    justify-content: space-between;
+}
