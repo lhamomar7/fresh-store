@@ -1,11 +1,11 @@
-/* ===== RESET ===== */
+/* basic reset */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* ===== BASE ===== */
+/* global styles */
 body {
     font-family: Arial, sans-serif;
     color: #333;
@@ -16,7 +16,7 @@ a {
     cursor: pointer;
 }
 
-/* ===== HEADER ===== */
+/* header layout */
 header {
     display: flex;
     justify-content: space-between;
@@ -29,6 +29,7 @@ header {
     z-index: 100;
 }
 
+/* logo area */
 header .logo {
     display: flex;
     align-items: center;
@@ -47,6 +48,7 @@ header .logo span {
     letter-spacing: 2px;
 }
 
+/* navigation */
 header nav {
     display: flex;
     gap: 30px;
@@ -64,7 +66,7 @@ header nav a.active {
     font-weight: bold;
 }
 
-/* ===== HERO ===== */
+/* hero section (top banner) */
 .hero {
     display: flex;
     align-items: center;
@@ -89,14 +91,15 @@ header nav a.active {
     color: #555;
 }
 
+/* hero image */
 .hero img {
     width: 50%;
     height: 320px;
-    object-fit: contain;
+    object-fit: contain; /* keeps full image visible */
     background: #ede9ff;
 }
 
-/* ===== ABOUT ===== */
+/* about section */
 .about {
     padding: 40px;
     border-top: 3px solid #ede9ff;
@@ -116,7 +119,7 @@ header nav a.active {
     margin-bottom: 12px;
 }
 
-/* ===== POPULAR ===== */
+/* popular cards section */
 .popular {
     padding: 30px 40px;
 }
@@ -128,6 +131,7 @@ header nav a.active {
     margin-bottom: 20px;
 }
 
+/* cards grid layout */
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -135,7 +139,7 @@ header nav a.active {
     padding-bottom: 32px;
 }
 
-/* ===== CARD ===== */
+/* single card */
 .card {
     background-color: #fff;
     border-radius: 12px;
@@ -154,6 +158,7 @@ header nav a.active {
     display: block;
 }
 
+/* heart icon */
 .card .card-img .heart {
     position: absolute;
     top: 10px;
@@ -170,6 +175,7 @@ header nav a.active {
     cursor: pointer;
 }
 
+/* card text */
 .card h3 {
     font-size: 15px;
     font-weight: bold;
@@ -183,6 +189,7 @@ header nav a.active {
     line-height: 1.4;
 }
 
+/* card footer (price + cart) */
 .card .card-footer {
     display: flex;
     justify-content: space-between;
@@ -209,7 +216,7 @@ header nav a.active {
     cursor: pointer;
 }
 
-/* ===== GALLERY ===== */
+/* image gallery */
 .gallery {
     display: flex;
     justify-content: center;
@@ -224,7 +231,7 @@ header nav a.active {
     border: 2px solid #b8a9e8;
 }
 
-/* ===== MENU LIST ===== */
+/* menu list (icons + names) */
 .menu-list {
     padding: 20px 40px 30px;
 }
@@ -235,6 +242,7 @@ header nav a.active {
     color: #5a3e9e;
     margin-bottom: 16px;
 }
+
 .menu-list ul {
     list-style: none;
     display: flex;
@@ -253,9 +261,9 @@ header nav a.active {
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
-/* האייקון */
+/* rocket icon */
 .menu-list li .icon {
-    background: linear-gradient(135deg, #ff7a00, #ffb347); /* כתום */
+    background: linear-gradient(135deg, #ff7a00, #ffb347);
     color: #fff;
     width: 40px;
     height: 40px;
@@ -268,19 +276,19 @@ header nav a.active {
     box-shadow: 0 4px 10px rgba(255, 122, 0, 0.3);
 }
 
-/* הטקסט */
+/* menu text */
 .menu-list li span {
     font-weight: 500;
     color: #333;
 }
 
-/* hover קטן */
+/* small hover effect */
 .menu-list li:hover {
     transform: translateX(6px);
     transition: 0.2s;
 }
 
-/* ===== YOUR CHOICE ===== */
+/* pricing table section */
 .your-choice {
     padding: 20px 40px 40px;
 }
@@ -317,7 +325,7 @@ header nav a.active {
     color: #fff;
 }
 
-/* ===== FOOTER ===== */
+/* footer */
 footer {
     background-color: #ede9ff;
     display: flex;
