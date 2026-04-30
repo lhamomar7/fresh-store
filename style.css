@@ -92,11 +92,12 @@ header nav a.active {
 }
 
 /* hero image */
+.hero {
+    flex-wrap: wrap;
+}
+
 .hero img {
-    width: 50%;
-    height: 320px;
-    object-fit: contain; /* keeps full image visible */
-    background: #ede9ff;
+    max-width: 100%;
 }
 
 /* about section */
