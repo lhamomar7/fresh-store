@@ -1,11 +1,10 @@
-/* basic reset */
-* {
+{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* global styles */
+/* בסיס */
 body {
     font-family: Arial, sans-serif;
     color: #333;
@@ -16,7 +15,7 @@ a {
     cursor: pointer;
 }
 
-/* header layout */
+/* header */
 header {
     display: flex;
     justify-content: space-between;
@@ -29,7 +28,7 @@ header {
     z-index: 100;
 }
 
-/* logo area */
+/* לוגו */
 header .logo {
     display: flex;
     align-items: center;
@@ -48,7 +47,7 @@ header .logo span {
     letter-spacing: 2px;
 }
 
-/* navigation */
+/* ניווט */
 header nav {
     display: flex;
     gap: 30px;
@@ -66,12 +65,13 @@ header nav a.active {
     font-weight: bold;
 }
 
-/* hero section (top banner) */
+/* אזור עליון */
 .hero {
     display: flex;
     align-items: center;
     background-color: #ede9ff;
     min-height: 320px;
+    flex-wrap: wrap;
 }
 
 .hero .hero-text {
@@ -91,16 +91,16 @@ header nav a.active {
     color: #555;
 }
 
-/* hero image */
-.hero {
-    flex-wrap: wrap;
-}
-
+/* תמונה ראשית */
 .hero img {
+    width: 50%;
+    height: 320px;
+    object-fit: contain;
+    background: #ede9ff;
     max-width: 100%;
 }
 
-/* about section */
+/* about */
 .about {
     padding: 40px;
     border-top: 3px solid #ede9ff;
@@ -120,7 +120,7 @@ header nav a.active {
     margin-bottom: 12px;
 }
 
-/* popular cards section */
+/* כרטיסים */
 .popular {
     padding: 30px 40px;
 }
@@ -132,7 +132,6 @@ header nav a.active {
     margin-bottom: 20px;
 }
 
-/* cards grid layout */
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -140,7 +139,7 @@ header nav a.active {
     padding-bottom: 32px;
 }
 
-/* single card */
+/* כרטיס */
 .card {
     background-color: #fff;
     border-radius: 12px;
@@ -156,10 +155,9 @@ header nav a.active {
     width: 100%;
     height: 160px;
     object-fit: cover;
-    display: block;
 }
 
-/* heart icon */
+/* אייקון לב */
 .card .card-img .heart {
     position: absolute;
     top: 10px;
@@ -172,11 +170,9 @@ header nav a.active {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 14px;
-    cursor: pointer;
 }
 
-/* card text */
+/* טקסט בכרטיס */
 .card h3 {
     font-size: 15px;
     font-weight: bold;
@@ -187,10 +183,9 @@ header nav a.active {
     font-size: 12px;
     color: #777;
     padding: 0 14px 10px;
-    line-height: 1.4;
 }
 
-/* card footer (price + cart) */
+/* תחתית כרטיס */
 .card .card-footer {
     display: flex;
     justify-content: space-between;
@@ -199,7 +194,6 @@ header nav a.active {
 }
 
 .card .card-footer .price {
-    font-size: 14px;
     font-weight: bold;
     color: #5a3e9e;
 }
@@ -213,11 +207,9 @@ header nav a.active {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 14px;
-    cursor: pointer;
 }
 
-/* image gallery */
+/* גלריה */
 .gallery {
     display: flex;
     justify-content: center;
@@ -226,18 +218,20 @@ header nav a.active {
 }
 
 .gallery img {
+    height: 160px;
     width: 100%;
     max-width: 220px;
+    object-fit: cover;
+    border: 2px solid #b8a9e8;
 }
 
-/* menu list (icons + names) */
+/* רשימת תפריט */
 .menu-list {
     padding: 20px 40px 30px;
 }
 
 .menu-list h2 {
     font-size: 18px;
-    font-weight: bold;
     color: #5a3e9e;
     margin-bottom: 16px;
 }
@@ -253,14 +247,12 @@ header nav a.active {
     display: flex;
     align-items: center;
     gap: 16px;
-    font-size: 16px;
     padding: 10px 14px;
     background: #fff;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
-/* rocket icon */
+/* אייקון טיל */
 .menu-list li .icon {
     background: linear-gradient(135deg, #ff7a00, #ffb347);
     color: #fff;
@@ -270,31 +262,25 @@ header nav a.active {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 16px;
-    flex-shrink: 0;
-    box-shadow: 0 4px 10px rgba(255, 122, 0, 0.3);
 }
 
-/* menu text */
+/* טקסט */
 .menu-list li span {
     font-weight: 500;
-    color: #333;
 }
 
-/* small hover effect */
+/* hover קטן */
 .menu-list li:hover {
     transform: translateX(6px);
-    transition: 0.2s;
 }
 
-/* pricing table section */
+/* טבלה */
 .your-choice {
     padding: 20px 40px 40px;
 }
 
 .your-choice h2 {
     font-size: 18px;
-    font-weight: bold;
     color: #5a3e9e;
     margin-bottom: 16px;
 }
@@ -303,20 +289,17 @@ header nav a.active {
     background-color: #ede9ff;
     padding: 20px 30px;
     width: 60%;
-    min-height: 200px;
 }
 
 .your-choice table {
-    border-collapse: collapse;
     width: 100%;
+    border-collapse: collapse;
 }
 
 .your-choice th,
 .your-choice td {
     border: 1px solid #b8a9e8;
-    padding: 10px 16px;
-    text-align: left;
-    font-size: 14px;
+    padding: 10px;
 }
 
 .your-choice th {
@@ -341,20 +324,11 @@ footer {
 .footer-col h4 {
     font-size: 13px;
     font-weight: bold;
-    color: #333;
-    margin-bottom: 6px;
-    letter-spacing: 1px;
 }
 
 .footer-col a {
     color: #444;
     text-decoration: none;
-    font-size: 14px;
-    cursor: pointer;
-}
-
-.footer-col a:hover {
-    color: #5a3e9e;
 }
 
 .footer-col .social-icons {
@@ -363,17 +337,7 @@ footer {
     margin-top: 8px;
 }
 
-.footer-col .social-icons a {
-    color: #333;
-    font-size: 18px;
-}
-
-.footer-col .social-icons a:hover {
-    color: #5a3e9e;
-}
-
 .footer-col .copyright {
     font-size: 12px;
     color: #666;
-    margin-top: 6px;
 }
