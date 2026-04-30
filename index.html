@@ -1,169 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- basic meta + styles -->
+    <!-- meta בסיסי + כותרת -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizza HaMesholash</title>
 
-    <!-- main style + icons -->
+    <!-- סגנון ראשי + אייקונים -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- header: logo + navigation -->
-    <header>
-        <div class="logo">
-            <img src="pizza logo.jpg" alt="Pizza HaMesholash logo">
-            <span>pizza hamesholash</span>
+<header>
+    <!-- לוגו + שם -->
+    <div class="logo">
+        <img src="pizza-logo.jpg" alt="Pizza HaMesholash logo">
+        <span>pizza hamesholash</span>
+    </div>
+
+    <!-- ניווט עליון -->
+    <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="products.html">Our Pizza</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<main>
+
+    <!-- אזור פתיחה: טקסט + תמונה -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Enjoy!</h1>
+            <p>Get ready for the most delicious experience, order now from the best pizzeria in the country.</p>
         </div>
-        <nav>
-            <a href="index.html" class="active">Home</a>
-            <a href="products.html">Our Pizza</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-        </nav>
-    </header>
+        <img src="pizzahamesholash.jpg" alt="Pizza HaMesholash">
+    </section>
 
-    <main>
+    <!-- קצת על העסק -->
+    <section class="about">
+        <h2>About</h2>
+        <p>Pizza HaMesholash was founded in 1992 as a small local pizza place with a big passion for quality and taste. What started as a modest neighborhood shop quickly became a favorite spot for many customers thanks to its fresh ingredients and dedication to great service.</p>
+        <p>Over the years, we expanded and opened new branches across the country, bringing our unique flavor to more people and becoming a well-known name loved by pizza fans everywhere.</p>
+        <p>As we grew, we also expanded our menu. From classic pizzas to a wider variety of toppings and dishes, we made sure to offer something for everyone while keeping the same quality and love that defined us from the beginning.</p>
+    </section>
 
-        <!-- hero section (intro + main image) -->
-        <section class="hero">
-            <div class="hero-text">
-                <h1>Enjoy!</h1>
-                <p>Get ready for the most delicious experience, order now from the best pizzeria in the country.</p>
-            </div>
-            <img src="pizzahamesholash.jpg" alt="Pizza HaMesholash">
-        </section>
+    <!-- כרטיסים של מוצרים פופולריים -->
+    <section class="popular">
+        <h2>Popular Pizza</h2>
 
-        <!-- short business story -->
-        <section class="about">
-            <h2>About</h2>
-            <p>Pizza HaMesholash was founded in 1992 as a small local pizza place with a big passion for quality and taste. What started as a modest neighborhood shop quickly became a favorite spot for many customers thanks to its fresh ingredients and dedication to great service.</p>
-            <p>Over the years, we expanded and opened new branches across the country, bringing our unique flavor to more people and becoming a well-known name loved by pizza fans everywhere.</p>
-            <p>As we grew, we also expanded our menu. From classic pizzas to a wider variety of toppings and dishes, we made sure to offer something for everyone while keeping the same quality and love that defined us from the beginning.</p>
-        </section>
+        <div class="cards-grid">
 
-        <!-- popular menu cards -->
-        <section class="popular">
-            <h2>Popular Pizza</h2>
+            <!-- VIP -->
+            <article class="card">
+                <div class="card-img">
+                    <img src="smoothie1.jpg" alt="VIP Pizza">
+                    <span class="heart"><i class="fa-regular fa-heart"></i></span>
+                </div>
+                <h3>VIP Pizza</h3>
+                <p>All toppings, your way. No limits.</p>
+                <div class="card-footer">
+                    <span class="price">$30.00</span>
+                    <span class="cart"><i class="fa-solid fa-cart-shopping"></i></span>
+                </div>
+            </article>
 
-            <div class="cards-grid">
+            <!-- עגבניות + פטריות -->
+            <article class="card">
+                <div class="card-img">
+                    <img src="MSHOLASH1.jpg" alt="Tomato and Mushroom Pizza">
+                    <span class="heart"><i class="fa-regular fa-heart"></i></span>
+                </div>
+                <h3>Tomato &amp; Mushroom Pizza</h3>
+                <p>Gouda, cherry tomatoes &amp; mushrooms.</p>
+                <div class="card-footer">
+                    <span class="price">$22.00</span>
+                    <span class="cart"><i class="fa-solid fa-cart-shopping"></i></span>
+                </div>
+            </article>
 
-                <!-- VIP -->
-                <article class="card">
-                    <div class="card-img">
-                        <img src="smoothie1.jpg" alt="VIP Pizza">
-                        <span class="heart"><i class="fa-regular fa-heart"></i></span>
-                    </div>
-                    <h3>VIP Pizza</h3>
-                    <p>All toppings, your way. No limits.</p>
-                    <div class="card-footer">
-                        <span class="price">$30.00</span>
-                        <span class="cart"><i class="fa-solid fa-cart-shopping"></i></span>
-                    </div>
-                </article>
+            <!-- רגילה -->
+            <article class="card">
+                <div class="card-img">
+                    <img src="MESHOLASH2.jpg" alt="Plain Pizza">
+                    <span class="heart"><i class="fa-regular fa-heart"></i></span>
+                </div>
+                <h3>Plain Pizza</h3>
+                <p>Classic pizza with Gouda cheese.</p>
+                <div class="card-footer">
+                    <span class="price">$15.00</span>
+                    <span class="cart"><i class="fa-solid fa-cart-shopping"></i></span>
+                </div>
+            </article>
 
-                <!-- Tomato & Mushroom -->
-                <article class="card">
-                    <div class="card-img">
-                        <img src="MSHOLASH1.jpg" alt="Tomato and Mushroom Pizza">
-                        <span class="heart"><i class="fa-regular fa-heart"></i></span>
-                    </div>
-                    <h3>Tomato &amp; Mushroom Pizza</h3>
-                    <p>Gouda, cherry tomatoes &amp; mushrooms.</p>
-                    <div class="card-footer">
-                        <span class="price">$22.00</span>
-                        <span class="cart"><i class="fa-solid fa-cart-shopping"></i></span>
-                    </div>
-                </article>
+            <!-- פיצה + שתייה -->
+            <article class="card">
+                <div class="card-img">
+                    <img src="MESHOLASH3.jpg" alt="Plain Pizza and Drink">
+                    <span class="heart"><i class="fa-regular fa-heart"></i></span>
+                </div>
+                <h3>Plain Pizza &amp; Drink</h3>
+                <p>Gouda pizza with a drink on the side.</p>
+                <div class="card-footer">
+                    <span class="price">$20.00</span>
+                    <span class="cart"><i class="fa-solid fa-cart-shopping"></i></span>
+                </div>
+            </article>
 
-                <!-- Plain -->
-                <article class="card">
-                    <div class="card-img">
-                        <img src="MESHOLASH2.jpg" alt="Plain Pizza">
-                        <span class="heart"><i class="fa-regular fa-heart"></i></span>
-                    </div>
-                    <h3>Plain Pizza</h3>
-                    <p>Classic pizza with Gouda cheese.</p>
-                    <div class="card-footer">
-                        <span class="price">$15.00</span>
-                        <span class="cart"><i class="fa-solid fa-cart-shopping"></i></span>
-                    </div>
-                </article>
+            <!-- פפרוני -->
+            <article class="card">
+                <div class="card-img">
+                    <img src="pepperoni.jpg" alt="Pepperoni Pizza">
+                    <span class="heart"><i class="fa-regular fa-heart"></i></span>
+                </div>
+                <h3>Pepperoni Pizza</h3>
+                <p>Gouda &amp; pepperoni pizza.</p>
+                <div class="card-footer">
+                    <span class="price">$25.00</span>
+                    <span class="cart"><i class="fa-solid fa-cart-shopping"></i></span>
+                </div>
+            </article>
 
-                <!-- Pizza + drink -->
-                <article class="card">
-                    <div class="card-img">
-                        <img src="MESHOLASH3.jpg" alt="Plain Pizza and Drink">
-                        <span class="heart"><i class="fa-regular fa-heart"></i></span>
-                    </div>
-                    <h3>Plain Pizza &amp; Drink</h3>
-                    <p>Gouda pizza with a drink on the side.</p>
-                    <div class="card-footer">
-                        <span class="price">$20.00</span>
-                        <span class="cart"><i class="fa-solid fa-cart-shopping"></i></span>
-                    </div>
-                </article>
+            <!-- זיוה -->
+            <article class="card">
+                <div class="card-img">
+                    <img src="pizzahamesholash.jpg" alt="Ziva Stuffed Pastry">
+                    <span class="heart"><i class="fa-regular fa-heart"></i></span>
+                </div>
+                <h3>Ziva</h3>
+                <p>Crispy pastry filled with cheese and tomato sauce.</p>
+                <div class="card-footer">
+                    <span class="price">$18.00</span>
+                    <span class="cart"><i class="fa-solid fa-cart-shopping"></i></span>
+                </div>
+            </article>
 
-                <!-- Pepperoni -->
-                <article class="card">
-                    <div class="card-img">
-                        <img src="pepperoni.jpg" alt="Pepperoni Pizza">
-                        <span class="heart"><i class="fa-regular fa-heart"></i></span>
-                    </div>
-                    <h3>Pepperoni Pizza</h3>
-                    <p>Gouda &amp; pepperoni pizza.</p>
-                    <div class="card-footer">
-                        <span class="price">$25.00</span>
-                        <span class="cart"><i class="fa-solid fa-cart-shopping"></i></span>
-                    </div>
-                </article>
+        </div>
+    </section>
 
-                <!-- Ziva -->
-                <article class="card">
-                    <div class="card-img">
-                        <img src="pizzahamesholash.jpg" alt="Ziva Stuffed Pastry">
-                        <span class="heart"><i class="fa-regular fa-heart"></i></span>
-                    </div>
-                    <h3>Ziva</h3>
-                    <p>Crispy pastry filled with cheese and tomato sauce.</p>
-                    <div class="card-footer">
-                        <span class="price">$18.00</span>
-                        <span class="cart"><i class="fa-solid fa-cart-shopping"></i></span>
-                    </div>
-                </article>
+</main>
 
-            </div>
-        </section>
+<footer>
+    <!-- קישורים + רשתות -->
+    <div class="footer-col">
+        <h4>WHO WE ARE</h4>
+        <a href="#">About</a>
+        <a href="#">Team</a>
+        <a href="#">Work With Us</a>
 
-    </main>
-
-    <!-- footer links + social -->
-    <footer>
-        <div class="footer-col">
-            <h4>WHO WE ARE</h4>
-            <a href="#">About</a>
-            <a href="#">Team</a>
-            <a href="#">Work With Us</a>
-
-            <div class="social-icons">
-                <a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a>
-                <a href="https://facebook.com"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
-            </div>
-
-            <p class="copyright">© Pizza HaMesholash | Since 1992</p>
+        <div class="social-icons">
+            <a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://facebook.com"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
         </div>
 
-        <div class="footer-col">
-            <h4>FOLLOW US</h4>
-            <a href="https://twitter.com">Twitter</a>
-            <a href="https://facebook.com">Facebook</a>
-            <a href="https://instagram.com">Instagram</a>
-        </div>
-    </footer>
+        <p class="copyright">© Pizza HaMesholash | Since 1992</p>
+    </div>
+
+    <div class="footer-col">
+        <h4>FOLLOW US</h4>
+        <a href="https://twitter.com">Twitter</a>
+        <a href="https://facebook.com">Facebook</a>
+        <a href="https://instagram.com">Instagram</a>
+    </div>
+</footer>
 
 </body>
 </html>
