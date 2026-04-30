@@ -1,4 +1,4 @@
-{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -71,7 +71,7 @@ header nav a.active {
     align-items: center;
     background-color: #ede9ff;
     min-height: 320px;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* שלא ישבר במסכים קטנים */
 }
 
 .hero .hero-text {
@@ -93,11 +93,10 @@ header nav a.active {
 
 /* תמונה ראשית */
 .hero img {
-    width: 50%;
-    height: 320px;
+    width: 100%; /* דרישה – תופס את כל הרוחב */
+    height: auto;
     object-fit: contain;
     background: #ede9ff;
-    max-width: 100%;
 }
 
 /* about */
@@ -170,6 +169,7 @@ header nav a.active {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 /* טקסט בכרטיס */
@@ -207,6 +207,7 @@ header nav a.active {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 /* גלריה */
@@ -218,9 +219,9 @@ header nav a.active {
 }
 
 .gallery img {
-    height: 160px;
     width: 100%;
     max-width: 220px;
+    height: auto;
     object-fit: cover;
     border: 2px solid #b8a9e8;
 }
