@@ -226,10 +226,8 @@ header nav a.active {
 }
 
 .gallery img {
-    height: 160px;
-    width: 220px;
-    object-fit: cover;
-    border: 2px solid #b8a9e8;
+    width: 100%;
+    max-width: 220px;
 }
 
 /* menu list (icons + names) */
