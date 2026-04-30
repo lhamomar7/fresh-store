@@ -1,10 +1,11 @@
+/* reset */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* בסיס */
+/* base styles */
 body {
     font-family: Arial, sans-serif;
     color: #333;
@@ -28,7 +29,7 @@ header {
     z-index: 100;
 }
 
-/* לוגו */
+/* logo */
 header .logo {
     display: flex;
     align-items: center;
@@ -47,7 +48,7 @@ header .logo span {
     letter-spacing: 2px;
 }
 
-/* ניווט */
+/* navigation */
 header nav {
     display: flex;
     gap: 30px;
@@ -65,13 +66,13 @@ header nav a.active {
     font-weight: bold;
 }
 
-/* אזור עליון */
+/* hero section */
 .hero {
     display: flex;
     align-items: center;
     background-color: #ede9ff;
     min-height: 320px;
-    flex-wrap: wrap; /* שלא ישבר במסכים קטנים */
+    flex-wrap: wrap; /* keeps layout safe on small screens */
 }
 
 .hero .hero-text {
@@ -91,15 +92,15 @@ header nav a.active {
     color: #555;
 }
 
-/* תמונה ראשית */
+/* main image */
 .hero img {
-    width: 100%; /* דרישה – תופס את כל הרוחב */
+    width: 100%; /* required full width */
     height: auto;
     object-fit: contain;
     background: #ede9ff;
 }
 
-/* about */
+/* about section */
 .about {
     padding: 40px;
     border-top: 3px solid #ede9ff;
@@ -119,7 +120,7 @@ header nav a.active {
     margin-bottom: 12px;
 }
 
-/* כרטיסים */
+/* cards */
 .popular {
     padding: 30px 40px;
 }
@@ -138,7 +139,7 @@ header nav a.active {
     padding-bottom: 32px;
 }
 
-/* כרטיס */
+/* card */
 .card {
     background-color: #fff;
     border-radius: 12px;
@@ -156,7 +157,7 @@ header nav a.active {
     object-fit: cover;
 }
 
-/* אייקון לב */
+/* heart icon */
 .card .card-img .heart {
     position: absolute;
     top: 10px;
@@ -172,7 +173,7 @@ header nav a.active {
     cursor: pointer;
 }
 
-/* טקסט בכרטיס */
+/* card text */
 .card h3 {
     font-size: 15px;
     font-weight: bold;
@@ -185,7 +186,7 @@ header nav a.active {
     padding: 0 14px 10px;
 }
 
-/* תחתית כרטיס */
+/* card footer */
 .card .card-footer {
     display: flex;
     justify-content: space-between;
@@ -210,7 +211,7 @@ header nav a.active {
     cursor: pointer;
 }
 
-/* גלריה */
+/* gallery */
 .gallery {
     display: flex;
     justify-content: center;
@@ -226,7 +227,7 @@ header nav a.active {
     border: 2px solid #b8a9e8;
 }
 
-/* רשימת תפריט */
+/* menu list */
 .menu-list {
     padding: 20px 40px 30px;
 }
@@ -253,7 +254,7 @@ header nav a.active {
     border-radius: 10px;
 }
 
-/* אייקון טיל */
+/* rocket icon */
 .menu-list li .icon {
     background: linear-gradient(135deg, #ff7a00, #ffb347);
     color: #fff;
@@ -265,17 +266,17 @@ header nav a.active {
     justify-content: center;
 }
 
-/* טקסט */
+/* text */
 .menu-list li span {
     font-weight: 500;
 }
 
-/* hover קטן */
+/* hover effect */
 .menu-list li:hover {
     transform: translateX(6px);
 }
 
-/* טבלה */
+/* table */
 .your-choice {
     padding: 20px 40px 40px;
 }
